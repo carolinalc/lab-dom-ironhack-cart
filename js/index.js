@@ -40,9 +40,13 @@ return precioTotal.innerHTML = counter;
 // ITERATION 4
 
 function removeProduct(event) {
-  const target = event.currentTarget;
-  console.log('The target in remove is:', target);
-  //... your code goes here
+  let decreaseNum = () => {
+  counter.innerText = Number(counter.innerText) - 1;
+}
+  let buttonDom = event.querySelector(".btn-remove");
+  buttonDom.target.remove("click", decreaseNum);
+
+  return event;
 }
 
 // ITERATION 5
